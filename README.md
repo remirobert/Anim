@@ -40,7 +40,7 @@ let resizeAnimation = Animation.resize(CGSizeMake(30, 30), delay: 1.5)
 let bounceAnimation = Animation.bounce(30, delay: 0.1)
 
 self.myView.layer.runAnimation(resizeAnimation, blockCompletion: { () -> () in
-  self.view.layer.runAnimation(bounceAnimation)
+  self.myView.layer.runAnimation(bounceAnimation)
 })
 ```
 
@@ -50,7 +50,7 @@ You can also use sequence of animations. All animations in a sequence will be ex
 let sequenceAnimation = Animation.sequenceAnimations([Animation.resize(CGSizeMake(30, 30), delay: 1.5),
                                                       Animation.bounce(30, delay: 0.1)])
 
-self.view.layer.runAnimation(sequenceAnimation)
+self.myView.layer.runAnimation(sequenceAnimation)
 ```
 
 Now there is the repeat animation method. For infinite or count animation.
@@ -63,8 +63,8 @@ let bounce = Animation.bounce(30, delay: 0.1)
 let repeatBouceForEver = Animation.repeatAnimations(Repeat.Infinity, animationParam: bounce)
 let repeatMove = Animation.repeatAnimations(Repeat.Count(10), animationParam: move)
 
-self.view.layer.runAnimation(repeatBouceForEver)
-self.view.layer.runAnimation(repeatMove)
+self.myView.layer.runAnimation(repeatBouceForEver)
+self.myView.layer.runAnimation(repeatMove)
 ```
 
 
