@@ -87,10 +87,10 @@ self.myView.layer.removeAllAnimations()
 
 Here is the code for build the animation above:
 
-
+```Swift
 let animationStart = Animation.sequenceAnimations([Animation.resizeFrame(CGSizeMake(300, 300), delay: 2), Animation.rotationX(-0.85, delay: 2)])
 
-```Swift       
+       
 o.layer.runAnimation(animationStart, blockCompletion: { () -> () in
   self.l.layer.runAnimation(Animation.movePosition(CGPointMake(100, 100), delay: 2))
   self.l.layer.runAnimation(Animation.resizeFrame(CGSizeMake(100, 100), delay: 2), blockCompletion: { () -> () in
