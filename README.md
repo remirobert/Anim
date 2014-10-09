@@ -67,7 +67,9 @@ self.myView.layer.runAnimation(repeatBouceForEver)
 self.myView.layer.runAnimation(repeatMove)
 ```
 
+For remove all current animation:
 
+```Swift
 <h1 align="center">Example</h1>
 
 <p align="center">
@@ -78,6 +80,8 @@ Here is the code for build the animation above:
 
 
 ```Swift
+self.myView.layer.removeAllAnimations()
+```
 let animationStart = Animation.sequenceAnimations([Animation.resizeFrame(CGSizeMake(300, 300), delay: 2), Animation.rotationX(-0.85, delay: 2)])
         
 o.layer.runAnimation(animationStart, blockCompletion: { () -> () in
