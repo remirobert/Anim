@@ -22,3 +22,12 @@ Anim allows you to use animations very easily. You can use it in your UIKit appl
  - Animations sequence
  - Repeat animations
  
+<h1 align="center">How to use it</h1>
+
+You can use Anim with all Layers (UIButton, UItableViewCell, UItextField, UIView, ...).
+Anim provides a extension for CALayer, for use animation: 
+
+```Swift
+let animation = Animation.movePosition(CGPointmake(30, 30), delay: 1.5)
+self.myView.layer.runAnimation(animation)
+```
