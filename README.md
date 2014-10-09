@@ -29,9 +29,21 @@ You can use Anim with all Layers (UIButton, UItableViewCell, UItextField, UIView
 Anim provides a extension for CALayer, for use animation: 
 
 ```Swift
-let animation = Animation.movePosition(CGPointmake(30, 30), delay: 1.5)
+let animation = Animation.movePosition(CGPointMake(30, 30), delay: 1.5)
 self.myView.layer.runAnimation(animation)
 ```
+
+You can use the block completion for link animation
+
+```Swift
+let resizeAnimation = Animation.resize(CGSizeMake(30, 30), delay: 1.5)
+let bounceAnimation = Animation.bounce(30, delay: 0.1)
+
+self.myView.layer.runAnimation(resizeAnimation, blockCompletion: { () -> () in
+  self.view.layer.runAnimation(bounceAnimation)
+})
+```
+
 
 <h1 align="center">Example</h1>
 
