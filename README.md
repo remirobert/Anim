@@ -138,3 +138,10 @@ self.myImageView.layer.runAnimation(Animation.rotationY(Float(M_PI) * 4, delay: 
 })
 ```
 
+<h1 align="center">Author</h1>
+Rémi ROBERT, remirobert33530@gmail.com
+
+<h1 align="center">Licence</h1>
+Anim is available under the MIT license. See the LICENSE file for more info.
+
+
