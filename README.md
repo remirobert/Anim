@@ -83,7 +83,8 @@ Here is the code for build the animation above:
 
 
 let animationStart = Animation.sequenceAnimations([Animation.resizeFrame(CGSizeMake(300, 300), delay: 2), Animation.rotationX(-0.85, delay: 2)])
-        
+
+```Swift       
 o.layer.runAnimation(animationStart, blockCompletion: { () -> () in
   self.l.layer.runAnimation(Animation.movePosition(CGPointMake(100, 100), delay: 2))
   self.l.layer.runAnimation(Animation.resizeFrame(CGSizeMake(100, 100), delay: 2), blockCompletion: { () -> () in
@@ -102,3 +103,18 @@ o.layer.runAnimation(animationStart, blockCompletion: { () -> () in
 })
 
 ```
+
+<p align="center">
+  <img src ="https://raw.githubusercontent.com/remirobert/Anim/master/ressources/record1.gif"/>
+</p>
+
+```Swift       
+let a = Animation.repeatAnimations(Repeat.Count(3), animationParam: Animation.moveCircle(CGRectMake(0, 100, 200, 200), delay: 1))
+let a2 = Animation.repeatAnimations(Repeat.Count(3), animationParam: Animation.moveCircle(CGRectMake(0, 100, 200, 200), delay: 1.5))
+let a3 = Animation.repeatAnimations(Repeat.Count(3), animationParam: Animation.moveCircle(CGRectMake(0, 100, 200, 200), delay: 2))
+
+l.layer.runAnimation(a)
+l2.layer.runAnimation(a2)
+l3.layer.runAnimation(a3)
+```
+
