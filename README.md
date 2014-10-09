@@ -105,7 +105,7 @@ o.layer.runAnimation(animationStart, blockCompletion: { () -> () in
 ```
 
 <p align="center">
-  <img src ="https://raw.githubusercontent.com/remirobert/Anim/master/ressources/record1.gif"/>
+  <img src ="https://raw.githubusercontent.com/remirobert/Anim/master/ressources/record2.gif"/>
 </p>
 
 ```Swift       
