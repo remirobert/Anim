@@ -81,11 +81,12 @@ self.myView.layer.removeAllAnimations()
 
 <h1 align="center">Example</h1>
 
+Here are some example of use:
+
 <p align="center">
   <img src ="https://raw.githubusercontent.com/remirobert/Anim/master/ressources/record1.gif"/>
 </p>
 
-Here is the code for build the animation above:
 
 ```Swift
 let animationStart = Animation.sequenceAnimations([Animation.resizeFrame(CGSizeMake(300, 300), delay: 2), Animation.rotationX(-0.85, delay: 2)])
