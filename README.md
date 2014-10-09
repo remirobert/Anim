@@ -32,6 +32,7 @@ Anim provides a extension for CALayer, for use animation:
 let animation = Animation.movePosition(CGPointMake(30, 30), delay: 1.5)
 self.myView.layer.runAnimation(animation)
 ```
+<hr>
 
 You can use the block completion for link animation
 
@@ -43,6 +44,7 @@ self.myView.layer.runAnimation(resizeAnimation, blockCompletion: { () -> () in
   self.myView.layer.runAnimation(bounceAnimation)
 })
 ```
+<hr>
 
 You can also use sequence of animations. All animations in a sequence will be executed one after the other.
 
@@ -52,6 +54,8 @@ let sequenceAnimation = Animation.sequenceAnimations([Animation.resize(CGSizeMak
 
 self.myView.layer.runAnimation(sequenceAnimation)
 ```
+
+<hr>
 
 Now there is the repeat animation method. For infinite or count animation.
 
@@ -66,6 +70,8 @@ let repeatMove = Animation.repeatAnimations(Repeat.Count(10), animationParam: mo
 self.myView.layer.runAnimation(repeatBouceForEver)
 self.myView.layer.runAnimation(repeatMove)
 ```
+
+<hr>
 
 For remove all current animation:
 
@@ -103,6 +109,7 @@ o.layer.runAnimation(animationStart, blockCompletion: { () -> () in
 })
 
 ```
+<hr>
 
 <p align="center">
   <img src ="https://raw.githubusercontent.com/remirobert/Anim/master/ressources/record2.gif"/>
