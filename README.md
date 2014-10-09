@@ -44,6 +44,29 @@ self.myView.layer.runAnimation(resizeAnimation, blockCompletion: { () -> () in
 })
 ```
 
+You can also use sequence of animations. All animations in a sequence will be executed one after the other.
+
+```Swift
+let sequenceAnimation = Animation.sequenceAnimations([Animation.resize(CGSizeMake(30, 30), delay: 1.5),
+                                                      Animation.bounce(30, delay: 0.1)])
+
+self.view.layer.runAnimation(sequenceAnimation)
+```
+
+Now there is the repeat animation method. For infinite or count animation.
+
+```Swift
+let move = Animation.sequenceAnimations([Animation.movePosition(CGPointMake(10, 10), delay: 1.5),
+                                         Animation.movePosition(CGPointMake(30, 30), delay: 1.5)])
+let bounce = Animation.bounce(30, delay: 0.1)
+                                                      
+let repeatBouceForEver = Animation.repeatAnimations(Repeat.Infinity, animationParam: bounce)
+let repeatMove = Animation.repeatAnimations(Repeat.Count(10), animationParam: move)
+
+self.view.layer.runAnimation(repeatBouceForEver)
+self.view.layer.runAnimation(repeatMove)
+```
+
 
 <h1 align="center">Example</h1>
 
