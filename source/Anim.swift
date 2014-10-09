@@ -233,7 +233,6 @@ class Animation: NSObject {
     }
     
     private func runBounce(layer:CALayer, value:Float, blockCompletion: (() -> ())?) {
-        println("call bounce \(self.delay) and \(value)")
         if value <= 3 {
             if let block = blockCompletion {
                 block()
@@ -257,7 +256,6 @@ class Animation: NSObject {
     }
     
     private func runMovePosition(layer: CALayer, position: CGPoint, blockCompletion: (() -> ())?) {
-        println("call here")
         UIView.animateWithDuration(self.delay, animations: { () -> Void in
             layer.frame = CGRectMake(position.x, position.y, layer.frame.size.width, layer.frame.size.height)
         }) { (Bool) -> Void in
@@ -382,7 +380,6 @@ class Animation: NSObject {
         let currentAnimation = self.animationsList?[self.countAnimation]
         
         currentAnimation?.runAnimation(layer, blockCompletion: { () -> () in
-            println("current Time action : \(currentAnimation?.delay)")
             self.countAnimation += 1
             self.execAnimationSequence(layer)
         })
