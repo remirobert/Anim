@@ -125,3 +125,16 @@ l2.layer.runAnimation(a2)
 l3.layer.runAnimation(a3)
 ```
 
+<hr>
+
+<p align="center">
+  <img src ="https://raw.githubusercontent.com/remirobert/Anim/master/ressources/record3.gif"/>
+</p>
+
+```Swift
+self.myImageView.layer.runAnimation(Animation.rotationY(Float(M_PI) * 4, delay: 2), blockCompletion: { () -> () in
+  self.myImageView.layer.runAnimation(Animation.bounce(60, delay: 0.1))
+  self.myImageView.image = UIImage(named: "otherImage")
+})
+```
+
